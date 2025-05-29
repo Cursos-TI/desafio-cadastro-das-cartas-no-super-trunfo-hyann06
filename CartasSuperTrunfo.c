@@ -6,13 +6,15 @@ int main() {
     printf("\n");
     printf(">Começe cadastrando suas cartas<\n");   //Solicitação pra cadastrar as cartas
     
-    printf("\n");   //Espaço entre o texto de boas vindas e o cadastramento das cartas
+    printf("\n");   
 
 
     int populacao, POPULACAO;
     int turistico, TURISTICO;
     float area, AREA;
     float pib, PIB;
+    float denp, DENP;   //Densidade populacional
+    float pibper, PIBPER;   //PIB Percapto
     char estado, ESTADO;
     char nome[30], NOME[30];
     char codigo[30], CODIGO[30];
@@ -27,7 +29,7 @@ int main() {
     scanf("%s", codigo);
 
     printf("Digite o nome do estado: ");    //Nome do estado escolhido
-    scanf("%s", nome);
+    scanf(" %[^\n]", nome);
 
     printf("Digite a população do estado: ");
     scanf("%d", &populacao);
@@ -40,6 +42,9 @@ int main() {
 
     printf("Digite a quantidade de pontos turisticos do estado: ");
     scanf("%d", &turistico);
+
+    denp = (float)(populacao / area);
+    pibper = (float)(pib / populacao);
 
     printf("\n");
     printf("\n");
@@ -56,7 +61,7 @@ int main() {
     scanf("%s", CODIGO);
 
     printf("Digite o nome do estado: ");
-    scanf("%s", NOME);
+    scanf(" %[^\n]", NOME);
 
     printf("Digite a população do estado: ");
     scanf("%d", &POPULACAO);
@@ -69,6 +74,9 @@ int main() {
 
     printf("Digite a quantidade de pontos turisticos do estado: ");
     scanf("%d", &TURISTICO);
+
+    DENP = (float)(POPULACAO / AREA);
+    PIBPER = (float)(PIB / POPULACAO);
 
 
     printf("\n");
@@ -84,6 +92,8 @@ int main() {
     printf("Área: %.3fKm² \n", area);
     printf("PIB: R$ %.3f \n", pib);
     printf("Numero de pontos turisticos: %d \n", turistico);
+    printf("Densidade Populacional: %.2f \n", denp);
+    printf("PIB Percapto: %.2f \n", pibper);
 
     printf("\n");
     printf("\n");
@@ -95,6 +105,8 @@ int main() {
     printf("Área: %.3fKm² \n", AREA);
     printf("PIB: R$ %.3f \n", PIB);
     printf("Numero de pontos turisticos: %d \n", TURISTICO);
+    printf("Densidade Populacional: %.2F \n", DENP);
+    printf("PIB Percapto: %.2f \n", PIBPER);
 
 
 
